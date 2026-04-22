@@ -1,0 +1,43 @@
+# Water Intake Prediction App
+
+A Streamlit application that predicts water intake based on user input using logistic regression.
+
+## Project Structure
+
+- **app.py** - Main Streamlit application for making predictions
+- **train_model.py** - Training script to generate pickle files
+- **model.pkl** - Trained logistic regression model (binary pickle file)
+- **gender.pkl** - Encoded gender labels (binary pickle file)
+- **activity.pkl** - Encoded activity labels (binary pickle file)
+- **weather.pkl** - Encoded weather labels (binary pickle file)
+
+## Setup
+
+1. **Prepare your dataset** - `your_dataset.csv` with columns:
+   - Your age
+   - Male/Female
+   - Body Weight
+   - Daily Water Intake
+   - Physical Activity
+   - Weather Condition
+   - target (target variable)
+
+2. **Train the model**:
+   ```bash
+   python train_model.py
+   ```
+   This generates the pickle files needed by the app.
+
+3. **Run the Streamlit app**:
+   ```bash
+   streamlit run app.py
+   ```
+
+## Requirements
+
+- streamlit
+- numpy
+- scikit-learn
+- pandas
+- matplotlib
+- seaborn
